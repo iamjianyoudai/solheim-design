@@ -1,0 +1,33 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define custom properties for color schemes */
+:root {
+  --color-text-primary: #000; /* Black for light mode text */
+  --color-bg-primary: #fff; /* White for light mode background */
+  --color-link: #000; /* Black for light mode links */
+  --color-link-hover: #555; /* Dark gray for hover state in light mode */
+}
+
+.dark {
+  --color-text-primary: #fff; /* White for dark mode text */
+  --color-bg-primary: #333; /* Dark gray for dark mode background */
+  --color-link: #bbb; /* Light gray for dark mode links */
+  --color-link-hover: #ddd; /* Lighter gray for hover state in dark mode */
+}
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+a {
+  color: var(--color-link);
+  transition: color 0.3s ease; /* Smooth transition for link color change */
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
