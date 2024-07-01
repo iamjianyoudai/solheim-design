@@ -31,3 +31,49 @@ a {
 a:hover {
   color: var(--color-link-hover);
 }
+.wrapper {
+  @apply container px-4 mx-auto;
+}
+
+.subtitle {
+  @apply uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-gray-500;
+}
+
+.transition {
+  @apply duration-300 transition-all ease-in-out;
+}
+
+.pagination {
+  @apply mx-auto flex flex-wrap items-center justify-between md:space-x-2;
+}
+
+.pagination .disabled a {
+  @apply opacity-30 !cursor-default !bg-gray-300 !text-gray-500 hover:shadow-none;
+}
+
+.pagination li a {
+  @apply rounded-full h-10 w-10 inline-flex items-center justify-center text-[11.5px] font-bold uppercase tracking-[2px] text-white bg-blue-600 py-4 px-5 transition hover:bg-white hover:text-blue-600 hover:shadow-2xl;
+}
+
+.pagination li.active a {
+  @apply bg-white shadow-2xl text-blue-600;
+}
+
+.pagination li:first-child {
+  @apply !mr-2 md:!mr-5;
+}
+.pagination li:last-child {
+  @apply !ml-2 md:!ml-5;
+}
+
+.pagination li:first-child a,
+.pagination li:last-child a {
+  @apply w-auto px-3 md:px-5 rounded-none;
+}
+
+.prose h1,
+h2,
+h3,
+h4 {
+  @apply font-medium text-slate-900;
+}

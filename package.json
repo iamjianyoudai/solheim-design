@@ -12,6 +12,7 @@
   "author": "Jianyou Dai",
   "dependencies": {
     "@heroicons/react": "^2.1.4",
+    "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",

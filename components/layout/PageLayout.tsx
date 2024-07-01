@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Header } from "./header/Header";
+import Header from "./header/Header";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -16,6 +16,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
         id="main"
         lang={contentLocale.replace("_", "-")}
         ref={mainContentRef}
+        // className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         {children}
       </main>
