@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import { navContent } from "./navContent";
 
 interface NavigationProps {
   language: string;
@@ -9,26 +11,15 @@ const Navigation: React.FC<NavigationProps> = ({ language, setLanguage }) => {
   return (
     <>
       <nav className="hidden lg:flex gap-8 text-black dark:text-white font-semibold">
-        <a href="#" className="hover:text-gray-400 dark:hover:text-gray-300">
-          {language === "no" ? "Hjem" : language === "en" ? "Home" : "主页"}
-        </a>
-        <a href="#" className="hover:text-gray-400 dark:hover:text-gray-300">
-          {language === "no"
-            ? "om oss"
-            : language === "en"
-            ? "about us"
-            : "关于我们"}
-        </a>
-        <a href="#" className="hover:text-gray-400 dark:hover:text-gray-300">
-          {language === "no" ? "design" : language === "en" ? "design" : "设计"}
-        </a>
-        <a href="#" className="hover:text-gray-400 dark:hover:text-gray-300">
-          {language === "no"
-            ? "prosjekter"
-            : language === "en"
-            ? "projects"
-            : "案例"}
-        </a>
+        {navContent.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className="dark:hover:text-gray-300 linkUnderlineHover"
+          >
+            {item.label[language as keyof typeof item.label]}
+          </Link>
+        ))}
       </nav>
 
       <select

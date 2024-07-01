@@ -1,4 +1,3 @@
-// Header.tsx
 import useDarkMode from "@/components/useDarkMode";
 import { useState } from "react";
 import { CiDark, CiMenuBurger } from "react-icons/ci";
