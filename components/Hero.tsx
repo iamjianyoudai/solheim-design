@@ -42,7 +42,7 @@ export const Hero = () => {
                   transition: { delay: 0.2, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
-                className="text-gray-800 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-6xl w-auto lg:w-full mb-4 md:mb-8"
+                className="text-gray-800 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-6xl w-auto lg:w-full mb-4 md:mb-8 "
               >
                 {title}
               </motion.h1>

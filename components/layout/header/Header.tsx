@@ -14,10 +14,10 @@ export const Header = () => {
   return (
     <header
       role="banner"
-      className="py-5 absolute w-full z-10"
+      className="py-4 absolute w-full z-10"
       style={{ backgroundColor: "var(--color-bg-primary)" }}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4">
         <div className="text-black dark:text-white font-bold">Logo</div>
         <Navigation language={language} setLanguage={setLanguage} />
         <button
