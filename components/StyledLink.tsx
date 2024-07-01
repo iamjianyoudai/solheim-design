@@ -17,8 +17,8 @@ const StyledLink = ({
     <Link
       href={href}
       className={`inline-block text-[11.5px] tracking-[2px] font-bold uppercase text-center ${
-        background ? background : "bg-blue-600"
-      } py-4 px-5 text-white hover:bg-white hover:text-blue-600 hover:shadow-2xl transition ${className}`}
+        background ? background : "bg-orange-500"
+      } py-4 px-5 text-white hover:bg-white hover:text-orange-600 hover:shadow-2xl transition rounded ${className}`}
     >
       {children}
     </Link>

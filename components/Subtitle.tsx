@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 type SubtitleProps = {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 };
 
 const Subtitle = ({ children, delay = 0.2 }: SubtitleProps) => {

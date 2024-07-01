@@ -3,19 +3,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import StyledLink from "./StyledLink";
 import Subtitle from "./Subtitle";
-
-export const heroContent = {
-  intro: {
-    title: "Elevating Designs with Unwavering Structural Excellence",
-    subtitle: "Welcome",
-    description:
-      "Discover a world where architectural imagination meets unyielding structural excellence. At Arcraft, we're dedicated to the belief that exceptional design is synonymous with uncompromising engineering.",
-    link: {
-      href: "/projects",
-      label: "View Projects",
-    },
-  },
-} as const;
+import { heroContent } from "./utils/content";
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,14 +20,19 @@ export const Hero = () => {
   } = heroContent.intro;
 
   const imgScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
-  const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
-  return (
-    <section className="pt-32 pb-0 lg:pb-10" ref={ref}>
-      <div className="wrapper">
-        <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-screen lg:min-h-[700px] items-center justify-between">
-          <div className="lg:w-4/12 z-[3] relative">
-            {subtitle && <Subtitle>{subtitle}</Subtitle>}
+  // const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
 
+  return (
+    <section className="pt-32 lg:pt-16 pb-0 lg:pb-10" ref={ref}>
+      <div className="wrapper">
+        <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-screen lg:min-h-[700px] items-center justify-between lg:gap-6">
+          <div className="lg:w-5/12 z-[3] relative lg:pr-8">
+            {" "}
+            {subtitle && (
+              <Subtitle className="text-sm sm:text-base md:text-lg lg:text-xl">
+                {subtitle}
+              </Subtitle>
+            )}
             {title && (
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -49,12 +42,11 @@ export const Hero = () => {
                   transition: { delay: 0.2, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
-                className="text-gray-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl w-auto lg:w-screen max-w-xl mb-4 md:mb-8"
+                className="text-gray-800 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-6xl w-auto lg:w-full mb-4 md:mb-8 transition duration-500 ease-in-out"
               >
                 {title}
               </motion.h1>
             )}
-
             {description && (
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -64,12 +56,11 @@ export const Hero = () => {
                   transition: { delay: 0.2, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
-                className="leading-relaxed text-black/80 w-auto lg:w-screen max-w-xl text-base lg:text-lg mb-10 lg:mb-16"
+                className="leading-relaxed text-black/80 text-sm sm:text-base md:text-lg lg:text-xl w-auto lg:w-full mb-10 lg:mb-16"
               >
                 {description}
               </motion.p>
             )}
-
             {label && (
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -86,26 +77,30 @@ export const Hero = () => {
           </div>
 
           <div className="lg:w-7/12 relative">
+            {" "}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{
                 opacity: 1,
                 x: 0,
               }}
-              transition={{
-                delay: 0.4,
-                duration: 0.5,
-              }}
+              // transition={{
+              //   delay: 0.4,
+              //   duration: 0.5,
+              // }}
               viewport={{
                 once: true,
               }}
               className="z-[2] relative bg-cover bg-center"
-              style={{ y: imgScroll1 }}
+              style={{
+                y: imgScroll1,
+                transition: "0.5",
+              }}
             >
               <Image
-                src={"/hero.jpg"}
+                src={"/hero4.jpg"}
                 alt="Hero img"
-                className=" max-h-[800px]"
+                className=" max-h-[800px] rounded-lg"
                 width={828}
                 height={685}
                 priority
