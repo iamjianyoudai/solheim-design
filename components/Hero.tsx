@@ -26,7 +26,7 @@ export const Hero = () => {
     <section className="pt-32 lg:pt-16 pb-0 lg:pb-10" ref={ref}>
       <div className="wrapper">
         <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-screen lg:min-h-[700px] items-center justify-between lg:gap-6">
-          <div className="lg:w-5/12 z-[3] relative lg:pr-8">
+          <div className="lg:w-7/12 z-[3] relative lg:pr-8">
             {" "}
             {subtitle && (
               <Subtitle className="text-sm sm:text-base md:text-lg lg:text-xl">
@@ -42,7 +42,7 @@ export const Hero = () => {
                   transition: { delay: 0.2, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
-                className="text-gray-800 text-4xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-6xl w-auto lg:w-full mb-4 md:mb-8 "
+                className="text-gray-800 text-4xl sm:text-2xl md:text-4xl lg:text-3xl xl:text-5xl 2xl:text-6xl w-auto lg:w-full mb-4 md:mb-8 "
               >
                 {title}
               </motion.h1>
@@ -76,7 +76,7 @@ export const Hero = () => {
             )}
           </div>
 
-          <div className="lg:w-7/12 relative">
+          <div className="lg:w-6/12 relative">
             {" "}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -101,8 +101,8 @@ export const Hero = () => {
                 src={"/hero4.jpg"}
                 alt="Hero img"
                 className=" max-h-[800px] rounded-lg"
-                width={828}
-                height={685}
+                width={728}
+                height={585}
                 priority
               />
             </motion.div>

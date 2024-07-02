@@ -6,7 +6,7 @@
 /* Define custom properties for color schemes */
 :root {
   --color-text-primary: #000; /* Black for light mode text */
-  --color-bg-primary: #fff; /* White for light mode background */
+  --color-bg-primary: #f3f5f8; /* White for light mode background */
   --color-link: #000; /* Black for light mode links */
   --color-link-hover: #555; /* Dark gray for hover state in light mode */
 }
@@ -90,7 +90,7 @@ h4 {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: -3px;
+  bottom: -2px;
   left: 0;
   background-color: currentColor;
   visibility: hidden;
