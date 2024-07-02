@@ -102,3 +102,11 @@ h4 {
   visibility: visible;
   transform: scaleX(1);
 }
+
+.lang-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: none;
+}
