@@ -15,14 +15,7 @@ export const navContent = [
       zh: "关于我们",
     },
   },
-  {
-    href: "/design",
-    label: {
-      no: "Design",
-      en: "Design",
-      zh: "设计",
-    },
-  },
+
   {
     href: "/projects",
     label: {
