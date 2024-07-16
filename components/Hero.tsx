@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import StyledLink from "./StyledLink";
-import Subtitle from "./Subtitle";
+import Subtitle from "./ui/Subtitle";
 import { heroContent } from "./utils/content";
 
 export const Hero = () => {

@@ -43,7 +43,7 @@ a:hover {
 .transition {
   @apply duration-300 transition-all ease-in-out;
 }
-
+/* 
 .pagination {
   @apply mx-auto flex flex-wrap items-center justify-between md:space-x-2;
 }
@@ -70,7 +70,7 @@ a:hover {
 .pagination li:first-child a,
 .pagination li:last-child a {
   @apply w-auto px-3 md:px-5 rounded-none;
-}
+} */
 
 .prose h1,
 h2,
