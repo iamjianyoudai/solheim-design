@@ -1,7 +1,7 @@
 import PageLayout from "@/components/layout/PageLayout";
 import Hero from "@/components/ui/Hero";
 import { useRef } from "react";
-import Projects from "./Projects";
+import Projects from "../../components/projects/Projects";
 
 interface Project {
   slug: string;

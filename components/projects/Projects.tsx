@@ -23,7 +23,7 @@ const dummyProjects = [
     url: "/projects/project-4",
     image: "/hero4.jpg",
     role: "Full Stack Developer",
-    title: "Project 3",
+    title: "Project 4",
   },
 ];
 
