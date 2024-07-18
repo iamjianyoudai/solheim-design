@@ -60,9 +60,16 @@ const projectsData = [
     url: "/projects/project-4",
   },
 ];
-
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
 const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
-  const { title, content, image, date, client, year, role, url } = project;
+  const { title, content, image, date, client, year, role } = project;
 
   return (
     <motion.div
@@ -82,7 +89,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
           </h1>
           <p className="text-slate-500 mt-10">
             <span className="inline-flex space-x-3">
-              <span>{new Date(date).toLocaleDateString()}</span>
+              <span>{formatDate(date)}</span>
               <span>&#8226;</span>
               <span>{role}</span>
             </span>
