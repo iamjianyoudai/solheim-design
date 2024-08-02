@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+
+import Footer from "../ui/Footer";
 import Header from "./header/Header";
 
 interface PageLayoutProps {
@@ -20,7 +22,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children }) => {
       >
         {children}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
