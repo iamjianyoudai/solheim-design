@@ -38,7 +38,7 @@ const ProjectsItems: React.FC<ProjectsItemsProps> = ({ currentItems }) => {
                   alt="Project"
                   width={1064}
                   height={644}
-                  className="object-cover object-center h-[400px] max-w-full transition group-hover:scale-[1.05]"
+                  className="object-cover object-center h-[400px] max-w-full transition group-hover:scale-[1.05] rounded-lg"
                 />
               </Link>
               <div className="py-4 px-2">

@@ -1,39 +1,38 @@
+import React, { useState } from "react";
+import Pagination from "./Pagination";
+import { dummyProjectsData } from "./ProjectsData";
 import ProjectsItems from "./ProjectsItems";
 
-const dummyProjects = [
-  {
-    url: "/projects/project-1",
-    image: "/hero4.jpg",
-    role: "Frontend Developer",
-    title: "Project 1",
-  },
-  {
-    url: "/projects/project-2",
-    image: "/hero4.jpg",
-    role: "Backend Developer",
-    title: "Project 2",
-  },
-  {
-    url: "/projects/project-3",
-    image: "/hero4.jpg",
-    role: "Full Stack Developer",
-    title: "Project 3",
-  },
-  {
-    url: "/projects/project-4",
-    image: "/hero4.jpg",
-    role: "Full Stack Developer",
-    title: "Project 4",
-  },
-];
+const ITEMS_PER_PAGE = 4;
 
 const Projects: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalItems = dummyProjectsData.length;
+  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+  const handlePageChange = (pageNumber: number) => {
+    if (pageNumber > 0 && pageNumber <= totalPages) {
+      setCurrentPage(pageNumber);
+    }
+  };
+
+  const currentItems = dummyProjectsData.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
   return (
     <section className="pt-8 lg:pt-8 pb-0 lg:pb-10">
       <div className="wrapper">
         <div className="lg:w-10/12 mx-auto flex flex-wrap mb-10">
-          <ProjectsItems currentItems={dummyProjects} />
+          <ProjectsItems currentItems={currentItems} />
         </div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
       </div>
     </section>
   );
