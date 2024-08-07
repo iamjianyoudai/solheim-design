@@ -1,7 +1,4 @@
 import Copyright from "./Copyright";
-type SectionProps = {
-  className: string;
-};
 
 const Footer = () => {
   return (
