@@ -1,26 +1,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-interface Project {
-  title: string;
-  content: string;
-  image: string;
-  date: string;
-  client: string;
-  year: string;
-  role: string;
-  url: string;
-}
+import { ProductType } from "../utils/types";
 
 interface PostCardProps {
   index: number;
-  project: Project;
+  product: ProductType;
 }
 
-const PostCard: React.FC<PostCardProps> = ({ index, project }) => {
+const PostCard: React.FC<PostCardProps> = ({ index, product }) => {
   const delay = index * 0.05;
-  const { title, role, image, url } = project;
+  const { title, role, image, url } = product;
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

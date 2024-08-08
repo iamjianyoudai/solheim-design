@@ -2,19 +2,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { ProductType } from "../utils/types";
 
-type Project = {
-  url: string;
-  image: string;
-  role: string;
-  title: string;
+type ProductItemsProps = {
+  currentItems: ProductType[];
 };
 
-type ProjectsItemsProps = {
-  currentItems: Project[];
-};
-
-const ProjectsItems: React.FC<ProjectsItemsProps> = ({ currentItems }) => {
+const ProductItems: React.FC<ProductItemsProps> = ({ currentItems }) => {
   return (
     <>
       {currentItems &&
@@ -35,7 +29,7 @@ const ProjectsItems: React.FC<ProjectsItemsProps> = ({ currentItems }) => {
               <Link href={url} className="overflow-hidden block relative">
                 <Image
                   src={image}
-                  alt="Project"
+                  alt="Product"
                   width={1064}
                   height={644}
                   className="object-cover object-center h-[400px] max-w-full transition group-hover:scale-[1.05] rounded-lg"
@@ -56,4 +50,4 @@ const ProjectsItems: React.FC<ProjectsItemsProps> = ({ currentItems }) => {
   );
 };
 
-export default ProjectsItems;
+export default ProductItems;

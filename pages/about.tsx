@@ -1,3 +1,4 @@
+import Team from "@/components/about/Team";
 import Testimonials from "@/components/about/Testimonials";
 import PageLayout from "@/components/layout/PageLayout";
 import Hero from "@/components/ui/Hero";
@@ -11,6 +12,7 @@ const aboutPage = () => {
         subTitle="About us"
       />
       <Testimonials className="pt-10 lg:pt-44 pb-10 lg:bg-32" />
+      <Team className="py-10 lg:py-32" />
     </PageLayout>
   );
 };

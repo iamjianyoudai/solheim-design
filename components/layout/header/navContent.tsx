@@ -7,28 +7,28 @@ export const navContent = [
       zh: "主页",
     },
   },
+  // {
+  //   href: "/design",
+  //   label: {
+  //     no: "design",
+  //     en: "About Us",
+  //     zh: "关于我们",
+  //   },
+  // },
+  // {
+  //   href: "/arkitektur",
+  //   label: {
+  //     no: "arkitektur",
+  //     en: "architecture",
+  //     zh: "建筑",
+  //   },
+  // },
   {
-    href: "/design",
+    href: "/products",
     label: {
-      no: "design",
-      en: "About Us",
-      zh: "关于我们",
-    },
-  },
-  {
-    href: "/arkitektur",
-    label: {
-      no: "arkitektur",
-      en: "architecture",
-      zh: "建筑",
-    },
-  },
-  {
-    href: "/projects",
-    label: {
-      no: "prosjekter",
-      en: "projects",
-      zh: "案例",
+      no: "produkter",
+      en: "products",
+      zh: "作品",
     },
   },
   {
@@ -37,6 +37,14 @@ export const navContent = [
       no: "Om oss",
       en: "About Us",
       zh: "关于我们",
+    },
+  },
+  {
+    href: "/contact",
+    label: {
+      no: "kontakt",
+      en: "Contact",
+      zh: "联系我们",
     },
   },
 ];

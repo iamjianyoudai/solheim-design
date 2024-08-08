@@ -3,63 +3,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import StyledLink from "../StyledLink";
+import productsData from "../utils/ProductsData";
+import { ProductType } from "../utils/types";
 import PostCard from "./PostCard";
 
-interface ProjectContentProps {
-  project: {
-    title: string;
-    content: string;
-    image: string;
-    date: string;
-    client: string;
-    year: string;
-    role: string;
-    url: string;
-  };
+interface ProductContentProps {
+  product: ProductType;
 }
 
-const projectsData = [
-  {
-    title: "Project 1",
-    content: "Content for project 1",
-    image: "/hero4.jpg",
-    date: "2023-01-01",
-    client: "Client 1",
-    year: "2023",
-    role: "Frontend Developer",
-    url: "/projects/project-1",
-  },
-  {
-    title: "Project 2",
-    content: "Content for project 2",
-    image: "/hero4.jpg",
-    date: "2023-02-01",
-    client: "Client 2",
-    year: "2023",
-    role: "Backend Developer",
-    url: "/projects/project-2",
-  },
-  {
-    title: "Project 3",
-    content: "Content for project 3",
-    image: "/hero4.jpg",
-    date: "2023-03-01",
-    client: "Client 3",
-    year: "2023",
-    role: "Full Stack Developer",
-    url: "/projects/project-3",
-  },
-  {
-    title: "Project 4",
-    content: "Content for project 4",
-    image: "/hero4.jpg",
-    date: "2023-03-01",
-    client: "Client 4",
-    year: "2023",
-    role: "Full Stack Developer",
-    url: "/projects/project-4",
-  },
-];
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
   return date.toLocaleDateString("en-US", {
@@ -68,8 +19,8 @@ const formatDate = (dateString: string) => {
     day: "numeric",
   });
 };
-const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
-  const { title, content, image, date, client, year, role } = project;
+const ProductContent: React.FC<ProductContentProps> = ({ product }) => {
+  const { title, content, image, date, client, year, role } = product;
 
   return (
     <motion.div
@@ -101,7 +52,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
             alt={title}
             width={1065}
             height={644}
-            className="object-cover object-top"
+            className="object-cover object-top rounded-lg"
           />
         </div>
         <article className="prose mx-auto max-w-2xl">
@@ -127,21 +78,21 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
         </article>
       </div>
       <div className="max-w-4xl mx-auto mt-20 lg:mt-32">
-        <h2 className="text-2xl text-gray-700 mb-10">More Projects</h2>
+        <h2 className="text-2xl text-gray-700 mb-10">More Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projectsData
+          {productsData
             .filter((el) => el.title !== title)
             .map((item, i: number) => {
               if (i > 2) return null;
-              return <PostCard key={i} index={i} project={item} />;
+              return <PostCard key={i} index={i} product={item} />;
             })}
         </div>
         <div className="flex justify-center mt-10">
-          <StyledLink href="/projects">View all Projects</StyledLink>
+          <StyledLink href="/products">View all Products</StyledLink>
         </div>
       </div>
     </motion.div>
   );
 };
 
-export default ProjectContent;
+export default ProductContent;
