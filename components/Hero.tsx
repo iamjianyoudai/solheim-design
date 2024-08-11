@@ -23,7 +23,7 @@ export const Hero = () => {
   // const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);
 
   return (
-    <section className="pt-32 lg:pt-16 pb-0 lg:pb-10" ref={ref}>
+    <section className="pt-32 lg:pt-16 pb-0 " ref={ref}>
       <div className="wrapper">
         <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-screen lg:min-h-[700px] items-center justify-between lg:gap-6 duration-1000 ease-in-out">
           <div className="lg:w-7/12 z-[3] relative lg:pr-8">
